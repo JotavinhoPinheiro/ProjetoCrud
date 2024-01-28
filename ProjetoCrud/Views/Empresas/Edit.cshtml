@@ -1,0 +1,31 @@
+﻿@model ProjetoCrud.Models.Empresa
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<div class="central">
+    <h1>Editar Empresas</h1>
+
+    <hr />
+    <div>
+        <div>
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Id" />
+                <div>
+                    <label asp-for="RazaoSocial">Razão Social: </label>
+                    <input asp-for="RazaoSocial" />
+                    <span asp-validation-for="RazaoSocial"></span>
+                </div>
+                <div>
+                    <input type="submit" value="Save" class="link" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index" class="link">Voltar para tabela</a>
+    </div>
+
+</div>

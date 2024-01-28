@@ -1,0 +1,41 @@
+﻿@model ProjetoCrud.Models.Empresa
+
+@{
+    ViewData["Title"] = "Details";
+}
+<div class="central">
+    <h1>Detalhes</h1>
+
+    <div>
+        <h4>Empresa</h4>
+        <hr />
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="idTamanho">
+                        ID
+                    </th>
+                    <th>
+                        Razão Social
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="idTamanho">
+                        @Html.DisplayFor(model => model.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.RazaoSocial)
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model?.Id" class="link">Editar</a> |
+        <a asp-action="Index" class="link">Voltar para tabela</a>
+    </div>
+</div>

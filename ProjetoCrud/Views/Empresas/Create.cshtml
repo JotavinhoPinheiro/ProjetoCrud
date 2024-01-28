@@ -1,0 +1,28 @@
+﻿@model ProjetoCrud.Models.Empresa
+
+@{
+    ViewData["Title"] = "Create";
+}
+<div class="central">
+    <h1>Cadastrar Empresa</h1>
+
+    <hr />
+    <div>
+        <div>
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly"></div>
+                <div>
+                    <label asp-for="RazaoSocial">Cadastrar: </label>
+                    <input asp-for="RazaoSocial" />
+                    <span asp-validation-for="RazaoSocial"></span>
+
+                    <input class="link" type="submit" value="Create" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index" class="link">Voltar para tabela</a>
+    </div>
+</div>

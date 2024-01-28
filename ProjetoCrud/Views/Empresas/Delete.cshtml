@@ -1,0 +1,45 @@
+﻿@model ProjetoCrud.Models.Empresa
+
+@{
+    ViewData["Title"] = "Delete";
+}
+<div class="central">
+    <h1>Deletar</h1>
+
+    <div>
+        <h4>Empresa</h4>
+
+        <hr />
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="idTamanho">
+                        ID
+                    </th>
+                    <th>
+                        Razão Social
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="idTamanho">
+                        @Html.DisplayFor(model => model.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.RazaoSocial)
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr />
+
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <input type="submit" value="Delete" class="link" /> |
+            <a asp-action="Index" class="link">Voltar para tabela</a>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ProjetoCrud</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ProjetoCrud.styles.css" asp-append-version="true" />
+
+    <style>
+        .link {
+            margin: auto;
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            border: none;
+        }
+
+        .link:hover {
+            margin: auto;
+            background-color: green;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            border: none;
+        }
+
+
+        .central{
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .idTamanho{
+            width: 200px;
+        }
+        .itensTabela{
+            text-align: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+    @RenderBody()
+
+</body>
+</html>

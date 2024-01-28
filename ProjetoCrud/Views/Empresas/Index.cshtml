@@ -1,0 +1,44 @@
+﻿@model IEnumerable<ProjetoCrud.Models.Empresa>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="central">
+    <h1>Tabela de Empresas Cadastradas</h1>
+
+    <a asp-action="Create" class="link" class="central">Adicionar nova Empresa</a>
+
+    <table class="table">
+        <thead>
+            <tr class="itensTabela">
+                <th class="idTamanho">
+                    ID
+                </th>
+                <th>
+                    Razão Social
+                </th>
+                <th id="opcoesTamanho">
+                    Opções
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="itensTabela">
+                    <td class="idTamanho">
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RazaoSocial)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="link">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id" class="link">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="link">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
